@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 	<html lang="zxx" class="no-js">
-	<head>
+		<head>
 			
 		<!-- Mobile Specific Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<!-- Favicon-->
-		<link rel="shortcut icon" href="img/fav.html">
+		<link rel="shortcut icon" href="img/stan-logo.png">
 		<!-- Author Meta -->
-		<meta name="author" content="colorlib">
+		<meta name="Stanley Amaziro" content="Stanley Amaziro is a software engineer with a passion for creating innovative solutions that make a difference.">
 		<!-- Meta Description -->
-		<meta name="description" content="">
+		<meta name="description" content="Stanley Amaziro is a software engineer with a passion for creating innovative solutions that make a difference.">
 		<!-- Meta Keyword -->
-		<meta name="keywords" content="">
+		<meta name="keywords" content="Stanley Amaziro, software engineer, web developer, JavaScript, React, Node.js, Laravel, PHP, WordPress, open-source advocate, tech community">
 		<!-- meta character set -->
 		<meta charset="UTF-8">
 		<!-- Site Title -->
-		<title>Personal</title>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<title>Stanley Amaziro</title>
+
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
 			<!--
 			CSS
@@ -28,15 +28,18 @@
 			<link rel="stylesheet" href="css/jquery-ui.html">				
 			<link rel="stylesheet" href="css/nice-select.css">							
 			<link rel="stylesheet" href="css/animate.min.css">
-			<link rel="stylesheet" href="css/owl.carousel.css">				
+			<link rel="stylesheet" href="css/owl.carousel.css">					
 			<link rel="stylesheet" href="css/main.css">
-	</head>
+		</head>
 		<body>	
 		  <header id="header">
 			<div class="container main-menu">
 				<div class="row align-items-center justify-content-between d-flex">
-				  <div id="logo">
-					<a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
+				   <div id="logo" style=" height:10px 200px;">
+					<span style="font-size: 28px; font-weight: 600;">
+						<a href="index.html">STAN<span id="ley-bounce" 
+							style="display:inline-block; color: #0a0823;">{LEY}</span> AMAZIRO</a> 
+						</span>
 				  </div>
 				  <nav id="nav-menu-container">
 					<ul class="nav-menu">
@@ -110,7 +113,7 @@
 					<div class="filters">
 						<ul>
 							<li class="active" data-filter="*">All</li>
-							<li data-filter=".vector">CSS</li>
+							<li data-filter=".vector">Node/Express</li>
 							<li data-filter=".raster">React</li>
 							<li data-filter=".ui">PHP</li>
 							<li data-filter=".printing">WordPress</li>
@@ -119,21 +122,24 @@
 					
 					<div class="filters-content">
 						<div class="row grid">
+
 							<div class="single-portfolio col-sm-4 all vector ui">
 								<div class="relative">
 									<div class="thumb">
 										<div class="#"></div>
-										 <a href="http://mairuwa.netlify.app/" target="_blank">
-											<img class="image img-fluid" src="img/mairuwa.png" alt=""> 
+										 <a href="https://usemovie-app.netlify.app/home" target="_blank">
+											<img class="image img-fluid" src="img/usemovie.png" alt=""> 
 										</a>
 									</div>                           		
 								</div>
 								<div class="p-inner">
-									<h4>Mairuwa</h4>
-									<p> A water delivery service project</p>
-									<a href="http://mairuwa.netlify.app/" target="_blank"><p>VIEW PROJECT &#8594;</p></a>
+									<h4>Movie App</h4>
+									<p> A movie streaming service project</p>
+									<a href="https://usemovie-app.netlify.app/home" target="_blank"><p>VIEW PROJECT &#8594;</p></a>
 								</div>					                               
 							</div>
+
+
 							
 							<div class="single-portfolio col-sm-4 all raster">
 								<div class="relative">
@@ -156,22 +162,22 @@
 							</div>      
 							
 							
-							<div class="single-portfolio col-sm-4 all printing">
+							<div class="single-portfolio col-sm-4 all ui vector">
 								<div class="relative">
 									<div class="thumb">
 										<div class="#"></div>
-										 <img class="image img-fluid" src="img/uack.png" alt="">
+										 <img class="image img-fluid" src="img/webon.png" alt="Webon Tech Hub">
 									</div>
-									<a href="https://uack.africa" class="img-pop-up">	
+									<a href="https://usewebon.com" class="img-pop-up">	
 									  <div class="middle">
 										<div class="text align-self-center d-flex"><img src="#" alt=""></div>
 									  </div>
 									</a> 
 								</div>
 								<div class="p-inner">
-									<h4>UACK Africa</h4>
-									<p> Official Website of Union of Africa Community in Kazakhstan</p>
-									<a href="https://uack.africa" target="_blank"><p>VIEW PROJECT &#8594;</p></a>
+									<h4>Webon Tech Hub</h4>
+									<p> A Tech Starup portfolio website</p>
+									<a href="https://usewebon.com" target="_blank"><p>VIEW PROJECT &#8594;</p></a>
 								</div>	
 							</div>
 
@@ -450,36 +456,35 @@
 			<script src="js/simple-skillbar.js"></script>							
 			<script src="js/owl.carousel.min.js"></script>							
 			<script src="js/mail-script.js"></script>	
-<script src="js/main.js"></script>  
+<script src="js/main.js"></script>
+
+<style>
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  20% { transform: translateY(-10px); }
+  40% { transform: translateY(-20px); }
+  60% { transform: translateY(-10px); }
+  80% { transform: translateY(0); }
+}
+#ley-bounce {
+  animation: bounce 1.2s infinite;
+  font-weight: bold;
+}
+</style>
 <script>
-// Portfolio horizontal scroll controls
+// Color cycling for 'LEY'
 document.addEventListener('DOMContentLoaded', function() {
-  var scrollContainer = document.querySelector('.portfolio-scroll');
-  var leftArrow = document.querySelector('.portfolio-arrow.left-arrow');
-  var rightArrow = document.querySelector('.portfolio-arrow.right-arrow');
-  if (scrollContainer && leftArrow && rightArrow) {
-	leftArrow.addEventListener('click', function() {
-	  scrollContainer.scrollBy({ left: -320, behavior: 'smooth' });
-	});
-	rightArrow.addEventListener('click', function() {
-	  scrollContainer.scrollBy({ left: 320, behavior: 'smooth' });
-	});
-  }
+  var ley = document.getElementById('ley-bounce');
+  var colors = ['#e74c3c', '#f1c40f', '#2ecc71', '#3498db', '#9b59b6', '#fd79a8', '#00b894', '#fdcb6e', '#636e72', '#d35400'];
+  var i = 0;
+  setInterval(function() {
+    ley.style.color = colors[i % colors.length];
+    i++;
+  }, 400);
 });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-23581568-13');
-</script>
-
-		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"969f95a80d301dc3","version":"2025.7.0","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"cd0b4b3a733644fc843ef0b185f98241","b":1}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"969f95a80d301dc3","version":"2025.7.0","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"cd0b4b3a733644fc843ef0b185f98241","b":1}' crossorigin="anonymous"></script>
 </body>
-	
-<!-- Mirrored from preview.colorlib.com/theme/personal/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 04 Aug 2025 16:57:41 GMT -->
 </html>
