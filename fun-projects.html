@@ -277,35 +277,51 @@
 			<script src="js/mail-script.js"></script>	
 			<script src="js/main.js"></script>
 <script>
-  // Dark mode toggle with persistence
+  // Dark mode toggle with persistence and mobile support
   (function() {
     const body = document.body;
-    const buttons = Array.from(document.querySelectorAll('.theme-toggle-btn'));
-    const icons = Array.from(document.querySelectorAll('.theme-toggle-icon'));
-    if (!buttons.length || !icons.length) return;
-
+    
     const stored = localStorage.getItem('theme');
     const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     const initial = stored || (prefersDark ? 'dark' : 'light');
 
-    const applyTheme = (mode) => {
-      const isDark = mode === 'dark';
-      body.classList.toggle('dark-mode', isDark);
+    const updateIcons = () => {
+      const icons = Array.from(document.querySelectorAll('.theme-toggle-icon'));
+      const isDark = body.classList.contains('dark-mode');
       icons.forEach(icon => {
         icon.classList.toggle('fa-moon', !isDark);
         icon.classList.toggle('fa-sun', isDark);
       });
     };
 
+    const applyTheme = (mode) => {
+      const isDark = mode === 'dark';
+      body.classList.toggle('dark-mode', isDark);
+      updateIcons();
+    };
+
+    // Apply initial theme
     applyTheme(initial);
 
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
+    // Use event delegation for all toggle buttons (including mobile menu clone)
+    document.addEventListener('click', function(e) {
+      if (e.target.closest('.theme-toggle-btn')) {
         const next = body.classList.contains('dark-mode') ? 'light' : 'dark';
         applyTheme(next);
         localStorage.setItem('theme', next);
-      });
+      }
     });
+
+    // Re-sync icons after mobile menu is cloned (runs after main.js)
+    setTimeout(updateIcons, 500);
+    
+    // Also watch for mobile menu creation
+    const observer = new MutationObserver(function(mutations) {
+      if (document.getElementById('mobile-nav')) {
+        updateIcons();
+      }
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
   })();
 </script>
 
