@@ -47,6 +47,11 @@
 					  <li><a href="index.html">Home</a></li>
 					  <li><a href="about.html">About</a></li>
 					  <li><a href="fun-projects.html">Fun Projects</a></li>
+					  <li class="theme-toggle">
+						<button class="theme-toggle-btn" aria-label="Toggle dark mode">
+						  <i class="theme-toggle-icon fa-solid fa-moon"></i>
+						</button>
+					  </li>
 					  
 					  <!-- <li class="menu-has-children"><a href="#">Blog</a>
 						<ul>
@@ -70,7 +75,7 @@
 							<h6>I am a Software Engineer</h6>
 							<h1>Stanley Amaziro</h1>
 							<p>
-								A Backend and Systems Engineer 
+								Backend and Systems Engineer 
 								| Caching, Scaling, <br> and DevOps Automation.
 							</p>
 							<a href="mailto:stanley.amaziro@gmail.com" class="primary-btn text-uppercase">Send Email</a>
@@ -79,7 +84,7 @@
 							 <a href="https://github.com/webziro" target="_blank" >Github  <i class="fa fa-github"></i></a>
 							</div>
 						<!-- Make the Hero Image bounce -->
-						<div class="col-lg-6 col-md-6 banner-right d-flex align-self-end">
+						<div class="col-lg-6 col-md-6 banner-right d-flex align-self-top">
 							<div class="bounce-container" style="position:relative; width:100%; 
 								display:flex; flex-direction:column; align-items:center;" >
 								<span id="bounce-text" style="position:absolute; top:-40px; 
@@ -87,6 +92,8 @@
 									color:#8490ff; z-index:2;" >
 								</span>
 								<img id="bounce-img" class="img-fluid" src="img/hero-img.png"
+								style="border-top-left-radius: 200px; border-top-right-radius: 100px; 
+								border-bottom-left-radius: 100px; border-bottom-right-radius: 1000px;"
 								 alt="Stanley Amaziro" 
 								style="animation:bounce 10s infinite;">
 							</div>
@@ -276,7 +283,7 @@
 			<section class="contact-page-area section-gap "  style="background-color: #fff;">
 				<div class="container">
 					<div class="title text-center">
-								<h1 class="mb-10">Skills and Technology</h1>
+								<h1 class="mb-10" >Skills and Technology</h1>
 								<p>I am skilled in using these tools to deliever solutions that solve everyday problems</p>
 					</div>
 
@@ -420,7 +427,7 @@
 
 			
 			<!-- Start timeline Area --> 
-			<section class="timeline pb-120 section-gap contact-page-area "   >
+			<section class="timeline pb-120 section-gap contact-page-area ">
             <div class="text-center">
                 <div class="menu-content pb-70">
                     <div class="title text-center">
@@ -609,6 +616,38 @@
 			<script src="js/owl.carousel.min.js"></script>							
 			<script src="js/mail-script.js"></script>	
 <script src="js/main.js"></script>
+<script>
+  // Dark mode toggle with persistence
+  (function() {
+    const body = document.body;
+    const buttons = Array.from(document.querySelectorAll('.theme-toggle-btn'));
+    const icons = Array.from(document.querySelectorAll('.theme-toggle-icon'));
+    if (!buttons.length || !icons.length) return;
+
+    const stored = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const initial = stored || (prefersDark ? 'dark' : 'light');
+
+    const applyTheme = (mode) => {
+      const isDark = mode === 'dark';
+      body.classList.toggle('dark-mode', isDark);
+      icons.forEach(icon => {
+        icon.classList.toggle('fa-moon', !isDark);
+        icon.classList.toggle('fa-sun', isDark);
+      });
+    };
+
+    applyTheme(initial);
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const next = body.classList.contains('dark-mode') ? 'light' : 'dark';
+        applyTheme(next);
+        localStorage.setItem('theme', next);
+      });
+    });
+  })();
+</script>
 
 <style>
 @keyframes bounce {
