@@ -3796,3 +3796,68 @@ body.mobile-nav-active #mobile-nav-toggle {
     gap: 20px;
   }
 }
+
+/* Skills marquee */
+.skills-marquee {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.skills-marquee::before,
+.skills-marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(to right, #fff 0%, rgba(255,255,255,0) 100%);
+}
+
+.skills-marquee::after {
+  right: 0;
+  transform: rotate(180deg);
+}
+
+.skills-marquee::before {
+  left: 0;
+}
+
+.skills-track {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: max-content;
+  animation: skills-bounce 32s linear infinite alternate;
+}
+
+.skill-card {
+  min-width: 160px;
+  padding: 16px 18px;
+  background: #f9f9ff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.skill-card i {
+  display: block;
+  font-size: 30px;
+  color: #8490ff;
+  margin-bottom: 10px;
+}
+
+.skill-card span {
+  font-weight: 600;
+  color: #222;
+  font-size: 14px;
+}
+
+@keyframes skills-bounce {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
