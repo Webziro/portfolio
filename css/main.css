@@ -3861,6 +3861,23 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #e5e7eb;
 }
 
+/* Dark mode styles for portfolio filters */
+.dark-mode .portfolio-area .filters ul li {
+  color: #e5e7eb !important;
+}
+
+.dark-mode .portfolio-area .filters ul li.active {
+  color: #93c5fd !important;
+}
+
+.dark-mode .portfolio-area .filters ul li:after {
+  background: #93c5fd;
+}
+
+.dark-mode .portfolio-area .filters ul li:hover {
+  color: #93c5fd !important;
+}
+
 .dark-mode .skills-marquee::before,
 .dark-mode .skills-marquee::after {
   background: linear-gradient(to right, #0f1628 0%, rgba(15,22,40,0) 100%);
@@ -3928,13 +3945,25 @@ body.mobile-nav-active #mobile-nav-toggle {
 .dark-mode .banner-left h1,
 .dark-mode .banner-left h6,
 .dark-mode .contact-page-area p,
+.dark-mode .timeline .content {
+  background-color: #111827 !important;
+  border: 1px solid #1f2937;
+  box-shadow: 0px 10px 27px 3px rgba(0, 0, 0, 0.4) !important;
+}
+
 .dark-mode .timeline .content,
 .dark-mode .timeline .content p,
-.dark-mode .timeline .content h4 {
-  color: #e5e7eb;
-}
+.dark-mode .timeline .content h4,
 .dark-mode .timeline .content time {
-  color: #e5e7eb;
+  color: #e5e7eb !important;
+}
+
+.dark-mode .timeline .content p b {
+  color: #93c5fd !important;
+}
+
+.dark-mode .timeline .content h4 time {
+  color: #e5e7eb !important;
 }
 
 .dark-mode .title h1,
