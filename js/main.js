@@ -480,7 +480,7 @@ $(document).ready(function() {
 });
 
 // Bouncing image with animated tech text
-var bounceWords = ["React", "Javascript", "PHP", "Wordpress", "Api", "CSS", "HTML"];
+var bounceWords = ["React", "Javascript", "Node.js", "Typescript", "Rest Api", "Docker", "PHP", "Express.js", "MySQL", "MongoDB", "Redis", "Memcached", "Rate Limiting", "Load Balancing", "API Design", "Swagger"];
 var bounceText = document.getElementById('bounce-text');
 var bounceImg = document.getElementById('bounce-img');
 if (bounceText && bounceImg) {
