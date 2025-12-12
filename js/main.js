@@ -485,12 +485,12 @@ var bounceText = document.getElementById('bounce-text');
 var bounceImg = document.getElementById('bounce-img');
 if (bounceText && bounceImg) {
     var idx = 0;
-    bounceImg.style.animationDuration = '4s'; // much slower bounce
+    bounceImg.style.animationDuration = '10s'; // much slower bounce
     bounceText.style.fontSize = '1.5em';
     bounceText.style.fontWeight = 'bold';
     bounceText.style.textShadow = '0 2px 8px #222, 0 0 10px #fff';
     bounceText.style.opacity = 1;
-    bounceText.style.transform = 'translateY(-70px) scale(1.3)';
+    bounceText.style.transform = 'translateY(70px) scale(1.3)';
     function showBounceText(word) {
         bounceText.textContent = word;
         bounceText.style.opacity = 1;
