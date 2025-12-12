@@ -736,6 +736,39 @@
   })();
 </script>
 
+
+<script 
+                src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" 
+                async defer
+            ></script>
+
+            <!-- 1) Conditional Loader or Try/Catch for Vercel/Cloudflare Beacon Script -->
+            <script>
+                // This logic attempts to handle the Vercel-injected beacon script robustly.
+                // It prevents errors if the script is unavailable or fails to load.
+                try {
+                    const scriptUrl = '/cdn-cgi/scripts/vcd15cbe/cloudflare-static/beacon.min.js';
+                    
+                    // Look for the script. If it's not present, we can optionally try to load it 
+                    // conditionally, or simply rely on the try/catch to suppress errors from Vercel's 
+                    // injection process.
+                    if (!document.querySelector(`script[src*="${scriptUrl}"]`)) {
+                        const beaconScript = document.createElement('script');
+                        beaconScript.src = scriptUrl;
+                        beaconScript.async = true;
+                        beaconScript.defer = true;
+                        document.body.appendChild(beaconScript);
+                    }
+                } catch (error) {
+                    console.warn("Vercel beacon script loading encountered an error, but was caught:", error);
+                }
+            </script>
+            
+
+
+
+
+
 <style>
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
